@@ -7,12 +7,8 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
 
 /**
  *
- * @author estebanbv
+ * @author Johan
  */
-public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
-
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class NationalPark {
     
 }

@@ -9,10 +9,15 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  *
  * @author estebanbv
  */
-public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
-
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class Vector {
+    ProtectedZones[] vector;
+    final static int SIZE=4;
+    public Vector(ProtectedZones[] vector) {
+        this.vector = vector;
     }
-    
+    public Vector(){
+        vector=new ProtectedZones[SIZE];
+    }
+            
+            
 }
