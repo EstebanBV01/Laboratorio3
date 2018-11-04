@@ -40,5 +40,6 @@ public abstract class ProtectedZones {
     public String toString() {
         return "ProtectedZones{" + "name=" + name + ", location=" + location + '}';
     }
-    public abstract double incomeAmount();
+    public abstract double stateIncome();
+    public abstract double privateIncome(int intTickets,int natTickets);
 }
