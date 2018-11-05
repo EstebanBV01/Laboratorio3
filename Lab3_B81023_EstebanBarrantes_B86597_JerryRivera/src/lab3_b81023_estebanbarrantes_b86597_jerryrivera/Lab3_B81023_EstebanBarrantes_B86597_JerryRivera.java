@@ -12,7 +12,20 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
 public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+       NationalPark natPark=new NationalPark("poas volcano", "alajuala,poas",0,0);
+       NationalPark natPark2=new NationalPark("Sta Rosa", "guanacaste,liberia",0,0);
+       Vector vector=new Vector();
+       ////////////////////////
+       natPark.privateIncome(30, 40);
+       natPark.publicIncome();
+       natPark.setTotalIncomes(natPark.publicIncomes, natPark.privateIncomes);
+       vector.addProtectedPlace(natPark);
+       vector.addProtectedPlace(natPark2);
+       vector.addProtectedPlace(natPark2);
+       vector.addProtectedPlace(natPark2);
+       vector.vectString();
+       System.out.println("counter "+vector.getCounter());
+        System.out.println("national park total incomes "+natPark.getTotalIncomes());
     }
     
 }

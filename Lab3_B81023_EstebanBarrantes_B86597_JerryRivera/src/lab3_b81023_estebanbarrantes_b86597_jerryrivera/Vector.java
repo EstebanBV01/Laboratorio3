@@ -13,33 +13,45 @@ public class Vector {
     ProtectedZones[] vector;
     final static int CONST=4;
     //contador de ingresos al vector
-    private int vectorCounter;
+    private int counter;
     public Vector(ProtectedZones[] vector) {
         this.vector = vector;
     }
     public Vector(){
         vector=new ProtectedZones[CONST];
     }
-   /* public void addProtectedPlace(ProtectedZones place){
+    public int getCounter(){
+    return counter;}
+    /////////////////
+    public void addProtectedPlace(ProtectedZones place){
         if(place != null){
-            if(vectorCounter==vector.length){
+            if(counter==vector.length-1){
+                System.out.println("paso");
                 this.biggerVector();
-            }else if(vectorCounter==0){
-                 for (int i = vectorCounter; i >0; i--) {
+            }if(counter==0){
+                 for (int i =counter; i >0; i--) {
                     vector[i]=vector[i-1];
                 }
                 vector[0]=place;
+               counter++; 
             }else{
-                
+                vector[counter]=place;
+                counter++;
             }                        
         }
-    }*/
-    public void biggerVector(){
-        ProtectedZones[] vector2= new ProtectedZones[CONST+1];
-        for (int i = 0; i < vector.length; i++) {
-            vector2[i]=this.vector[i];
-        }
-        vector2=vector;
     }
-            
+    private void biggerVector(){
+        ProtectedZones[] vector2=new ProtectedZones[vector.length+1];
+            for (int i = 0; i < vector.length; i++) {
+                vector2[i]=this.vector[i];
+        }
+            this.vector=vector2;
+    }
+    public void vectString(){
+        String storage="";
+        for (int i = 0; i < vector.length; i++) {
+            storage+=vector[i]+" \n";
+        }
+        System.out.println(storage+"\n");
+    }        
 }
