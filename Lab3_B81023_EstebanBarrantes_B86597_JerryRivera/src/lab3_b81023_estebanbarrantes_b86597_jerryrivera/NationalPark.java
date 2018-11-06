@@ -9,7 +9,7 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  *
  * @author estebanbv,
  */
-public abstract class NationalPark extends ProtectedZones implements Income{
+public class NationalPark extends ProtectedZones implements Income{
     private double publicIncomes;
     private double privateIncomes;
     private int electricityUsers;

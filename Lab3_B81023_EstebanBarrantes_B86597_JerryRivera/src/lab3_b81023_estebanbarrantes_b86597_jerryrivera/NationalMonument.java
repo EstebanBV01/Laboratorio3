@@ -9,7 +9,7 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  *
  * @author Usuario
  */
-public abstract class NationalMonument extends NationalPark implements Income {
+public class NationalMonument extends NationalPark implements Income {
     private double publicIncomes;
     private double privateIncomes;
     
