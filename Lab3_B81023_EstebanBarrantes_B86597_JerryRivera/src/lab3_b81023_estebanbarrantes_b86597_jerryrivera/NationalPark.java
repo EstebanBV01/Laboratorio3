@@ -10,25 +10,26 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  * @author estebanbv,
  */
 public class NationalPark extends ProtectedZones implements Income{
+    private double totalIncomes;
     private double publicIncomes;
     private double privateIncomes;
     private int nationalVisitors;
     private int foreignVisitors;
     private int electricityUsers;
-    public NationalPark(String name,String location,double total,int nationalVisitors, int foreignVisitors,int elecUsers){
-        super(name, location,total);
+    public NationalPark(String name,String location,int nationalVisitors, int foreignVisitors,int elecUsers){
+        super(name, location);
         this.foreignVisitors = foreignVisitors;
         this.nationalVisitors = nationalVisitors;
         this.electricityUsers=elecUsers;
     }
-        public NationalPark(String name,String location,double total,int nationalVisitors, int foreignVisitors){
-        super(name, location,total);
+        public NationalPark(String name,String location,int nationalVisitors, int foreignVisitors){
+        super(name, location);
         this.foreignVisitors = foreignVisitors;
         this.nationalVisitors = nationalVisitors;
        
     }
     public NationalPark() {
-        this("","",0,0,0,0);        
+        this("","",0,0,0);        
     }
 /////////////////////////////////////////7
 
@@ -75,8 +76,8 @@ public class NationalPark extends ProtectedZones implements Income{
     
     @Override
     public double totalIncomes(){
-        super.setTotalIncomes(privateIncomes+publicIncomes);
-        return super.getTotalIncomes();
+        this.totalIncomes=privateIncomes+publicIncomes;
+        return this.totalIncomes;
     }
     @Override
     public String toString() {

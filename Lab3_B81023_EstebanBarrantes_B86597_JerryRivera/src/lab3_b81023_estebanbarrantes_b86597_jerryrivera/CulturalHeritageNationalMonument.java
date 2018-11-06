@@ -10,22 +10,23 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  * @author usuario
  */
 public class CulturalHeritageNationalMonument extends NationalMonument implements Income {
-    private double publicIncomes;
     private double privateIncomes;
+    private double totalIncomes;
     private double pib;
-    public CulturalHeritageNationalMonument(String name, String location, double total , int nationalVisitors, int foreignVisitors, double pib) {
-        super(name, location, total, nationalVisitors, foreignVisitors);
+    public CulturalHeritageNationalMonument(String name, String location, int nationalVisitors, int foreignVisitors,double pib) {
+        super(name, location, nationalVisitors, foreignVisitors);
         this.pib = pib;
     }
     
+    @Override
     public void privateIncome(){
-        super.setPrivateIncomes(pib*0.00002+(super.getForeignVisitors()*6000)+(super.getNationalVisitors()*50000));
+        super.setPrivateIncomes(this.pib*0.00002+(super.getForeignVisitors()*6000)+(super.getNationalVisitors()*50000));
         
     }
     
     @Override
     public double totalIncomes (){
-        super.setTotalIncomes(this.privateIncomes);
+        this.totalIncomes=this.privateIncomes;
         return super.totalIncomes();
     }
     

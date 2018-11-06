@@ -12,10 +12,11 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
 public class NationalMonument extends NationalPark implements Income {
     private double publicIncomes;
     private double privateIncomes;
+    private double totalIncomes;
     
    
-    public NationalMonument (String name,String location, double total  , int nationalVisitors, int foreignVisitors){
-        super(name, location, total, nationalVisitors, foreignVisitors);
+    public NationalMonument (String name,String location  , int nationalVisitors, int foreignVisitors){
+        super(name, location, nationalVisitors, foreignVisitors);
         
     }
 
@@ -37,8 +38,8 @@ public class NationalMonument extends NationalPark implements Income {
     
     @Override
     public double totalIncomes() {
-        super.setTotalIncomes(this.privateIncomes);
-        return super.totalIncomes();
+        this.totalIncomes=this.privateIncomes;
+        return this.totalIncomes;
     }
 
     @Override

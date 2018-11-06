@@ -13,25 +13,17 @@ public class ProtectedZones {
     private String name;
     private String location;
     private double totalIncomes;
-    public ProtectedZones(String name, String location,double total) {
+    public ProtectedZones(String name, String location) {
         this.name = name;
         this.location = location;
-        this.totalIncomes=total;
+     
     }
     public ProtectedZones(){
-        this("","",0);
+        this("","");
     }
 
     public String getName() {
         return name;
-    }
-
-    public  double getTotalIncomes() {
-        return totalIncomes;
-    }
-
-    public  void setTotalIncomes(double  totalIncomes) {
-        this.totalIncomes = totalIncomes;
     }
 
     public String getLocation() {
