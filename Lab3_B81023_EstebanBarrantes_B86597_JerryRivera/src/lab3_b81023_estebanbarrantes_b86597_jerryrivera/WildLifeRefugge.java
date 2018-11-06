@@ -47,11 +47,13 @@ totalmente de ayuda no gubernamental por empresas privadas.*/
    
     @Override
     public String toString() {
-        return "WildLifeRefugge{" +super.toString() + ", privateIncomes=" + privateIncomes + ", publicIncomes=" + publicIncomes + "total "+this.privateIncomes+'}';
+        return "WildLifeRefugge{" +super.toString() + ", privateIncomes=" + privateIncomes + ", publicIncomes=" + publicIncome() + "total "+this.totalIncome()+'}';
     }
-    public double publicIncome(){return-1;};
+      public double publicIncome(){
+        this.publicIncomes = this.gasolineTax*0.5;
+        return this.publicIncomes;
+    }
    public void privateIncome(){
-    this.privateIncomes=gasolineTax*0.005;
    }
    public double totalIncome(){
         this.totalIncomes=publicIncomes+privateIncomes;

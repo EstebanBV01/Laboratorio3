@@ -20,6 +20,7 @@ public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
        CulturalHeritageNationalMonument natMonHeritage2 =new CulturalHeritageNationalMonument("Chacho", "Puntarenas",3, 221,5);
        BioReservation bioreserv = new BioReservation("Paquera", "Jaco", 500);
        BioReservation bioreserv2 = new BioReservation("Chiles", "San carlos", 123);
+       WildLifeRefugge wild=new WildLifeRefugge("cahita", "puntarenas", 775);
        Vector vector=new Vector();
        
        vector.addProtectedPlace(natPark);
@@ -28,7 +29,7 @@ public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
        vector.addProtectedPlace(natMon2);
        vector.addProtectedPlace(natMonHeritage);
        vector.addProtectedPlace(natMonHeritage2);
-       vector.addProtectedPlace(natMonHeritage2);
+       vector.addProtectedPlace(wild);
        vector.addProtectedPlace(bioreserv);
        vector.addProtectedPlace(bioreserv2);
        
