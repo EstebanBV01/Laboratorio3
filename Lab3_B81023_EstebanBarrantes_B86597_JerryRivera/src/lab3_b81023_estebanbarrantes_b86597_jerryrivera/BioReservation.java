@@ -11,30 +11,22 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  */
 public abstract class BioReservation extends ProtectedZones {
     private static  double publicIncome;
-    double totalIncome;
     
-    public BioReservation(String name, String location, double publicIncome){
-        super(name,location);
+    public BioReservation(String name, String location,int total, double publicIncome){
+        super(name,location,0);
         this.publicIncome = publicIncome;
     }
-
+    public BioReservation(){
+        this("","",0,0);
+ 
+    }
     public static double getPublicIncome() {
         return publicIncome;
     }
 
     public void setPublicIncome(double publicIncome) {
         this.publicIncome = publicIncome;
-    }
-
-    public  double getTotalIncome() {
-        return totalIncome;
-    }
-
-    public void setTotalIncome(double totalIncome) {
-        this.totalIncome = totalIncome;
-    }
-    
-    
+    } 
     @Override
     public double totalIncomes() {
         totalIncome = publicIncome;

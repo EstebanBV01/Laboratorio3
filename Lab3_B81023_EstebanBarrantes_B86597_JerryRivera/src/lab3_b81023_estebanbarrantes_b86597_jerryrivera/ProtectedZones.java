@@ -12,16 +12,26 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
 public abstract class ProtectedZones {
     private String name;
     private String location;
-    public ProtectedZones(String name, String location) {
+    private double totalIncomes;
+    public ProtectedZones(String name, String location,double total) {
         this.name = name;
         this.location = location;
+        this.totalIncomes=total;
     }
     public ProtectedZones(){
-        this("","");
+        this("","",0);
     }
 
     public String getName() {
         return name;
+    }
+
+    public  double getTotalIncomes() {
+        return totalIncomes;
+    }
+
+    public  void setTotalIncomes(double  totalIncomes) {
+        this.totalIncomes = totalIncomes;
     }
 
     public String getLocation() {
