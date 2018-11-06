@@ -30,7 +30,7 @@ public abstract class BioReservation extends ProtectedZones {
     @Override
     public double totalIncomes() {
         super.setTotalIncomes(publicIncome);
-        return totalIncome;
+        return this.totalIncomes();
     }
     
 }

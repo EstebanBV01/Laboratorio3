@@ -10,7 +10,7 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  * @author Usuario
  */
 public interface Income {
-    public void publicIncome();
+    public void publicIncome(int publicIncome);
     public void privateIncome();
     
 }

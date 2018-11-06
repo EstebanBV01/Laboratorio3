@@ -9,6 +9,10 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  *
  * @author usuario
  */
-public class CulturalHeritageNationalMonument {
+public class CulturalHeritageNationalMonument extends NationalMonument {
+    
+    public CulturalHeritageNationalMonument(String name, String location, double total, double publicIncomes, double privateIncomes, int electricityUsers, int nationalVisitors, int foreignVisitors) {
+        super(name, location, total, publicIncomes, privateIncomes, electricityUsers, nationalVisitors, foreignVisitors);
+    }
     
 }

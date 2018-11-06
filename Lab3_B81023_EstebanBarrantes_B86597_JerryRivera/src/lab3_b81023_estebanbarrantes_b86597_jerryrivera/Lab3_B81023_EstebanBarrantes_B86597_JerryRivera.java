@@ -12,8 +12,8 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
 public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
 
     public static void main(String[] args) {
-       NationalPark natPark=new NationalPark("poas volcano", "alajuala,poas",0,340,600, 700);
-       NationalPark natPark2=new NationalPark("Sta Rosa", "guanacaste,liberia",0,45,677, 888);
+       NationalPark natPark=new NationalPark("poas volcano", "alajuala,poas",340,600, 700);
+       NationalPark natPark2=new NationalPark("Sta Rosa", "guanacaste,liberia",45,677, 888);
        Vector vector=new Vector();
        ////////////////////////
        vector.addProtectedPlace(natPark);
