@@ -25,7 +25,8 @@ public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
        vector.addProtectedPlace(natPark2);
        vector.vectString();
        System.out.println("counter "+vector.getCounter());
-        System.out.println("national park total incomes "+natPark.getTotalIncomes());
+       System.out.println("national park total incomes "+natPark.getTotalIncomes());
+       BioReservation.getPublicIncome();
     }
     
 }
