@@ -9,7 +9,7 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  *
  * @author  estebanbv
  */
-public class WildLifeRefugge extends ProtectedZones{
+public class WildLifeRefugge extends ProtectedZones implements Income{
     /*Refugio de Vida Silvestre: Sus ingresos dependen si la reserva es propiedad del estado o es de
 propiedad privada. En el caso de que sea del estado, sus ingresos provienen por subvención del
 estado   de   un   porcentaje   de   0.005   del   monto   total   anual   obtenido   por   el   impuesto   de
@@ -17,9 +17,8 @@ combustibles. En el caso de que el refugio sea de propiedad privada sus ingresos
 totalmente de ayuda no gubernamental por empresas privadas.*/
     private double privateIncomes;
     private double publicIncomes;
-    private double gasolineTax;
     private double totalIncomes;
-
+    private double gasolineTax;
     public WildLifeRefugge( String name, String location ,double tax) {
         super(name, location);
         this.gasolineTax=tax;
@@ -48,11 +47,14 @@ totalmente de ayuda no gubernamental por empresas privadas.*/
    
     @Override
     public String toString() {
-        return "WildLifeRefugge{" +super.toString() + ", privateIncomes=" + privateIncomes + ", publicIncomes=" + publicIncomes + '}';
+        return "WildLifeRefugge{" +super.toString() + ", privateIncomes=" + privateIncomes + ", publicIncomes=" + publicIncomes + "total "+this.privateIncomes+'}';
     }
-   
+    public double publicIncome(){return-1;};
+   public void privateIncome(){
+    this.privateIncomes=gasolineTax*0.005;
+   }
    public double totalIncome(){
-        this.totalIncomes=privateIncomes+publicIncomes;
+        this.totalIncomes=publicIncomes+privateIncomes;
         return this.totalIncomes;
     }
   

@@ -46,5 +46,10 @@ public class NationalMonument extends NationalPark implements Income {
     public void privateIncome() {
         this.privateIncomes=(super.getForeignVisitors()*6000)+(super.getNationalVisitors()*5000);
     }
+
+    @Override
+    public String toString() {
+        return "NationalMonument{"+super.toString() + "publicIncomes=" + publicIncomes + ", privateIncomes=" + privateIncomes + ", totalIncomes=" + totalIncomes + '}';
+    }
     
 }

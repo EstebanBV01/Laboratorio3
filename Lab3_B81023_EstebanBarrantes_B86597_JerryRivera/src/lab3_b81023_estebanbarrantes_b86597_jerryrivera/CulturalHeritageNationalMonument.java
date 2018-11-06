@@ -29,6 +29,11 @@ public class CulturalHeritageNationalMonument extends NationalMonument implement
         this.totalIncomes=this.privateIncomes;
         return super.totalIncome();
     }
+
+    @Override
+    public String toString() {
+        return "CulturalHeritageNationalMonument{"+super.toString() + "privateIncomes=" + privateIncomes + ", totalIncomes=" + totalIncomes + ", pib=" + pib + '}';
+    }
     
     
 }

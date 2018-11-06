@@ -22,6 +22,11 @@ public class BioReservation extends ProtectedZones implements Income {
         this("","",0);
  
     }
+
+    @Override
+    public String toString() {
+        return "BioReservation{"+super.toString() + "publicIncome=" + publicIncome + ", totalIncomes=" + totalIncomes + ", stateHelp=" + stateHelp + '}';
+    }
     public double getPublicIncome() {
         return publicIncome;
     }
@@ -40,7 +45,7 @@ public class BioReservation extends ProtectedZones implements Income {
         this.publicIncome = this.stateHelp;
         return this.publicIncome;
     }
-
+    public void privateIncome(){};
     
     
 }
