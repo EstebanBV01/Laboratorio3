@@ -9,7 +9,7 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  *
  * @author Johan
  */
-public abstract class BioReservation extends ProtectedZones {
+public abstract class BioReservation extends ProtectedZones implements Income {
     private static  double publicIncome;
     
     public BioReservation(String name, String location,int total, double publicIncome){

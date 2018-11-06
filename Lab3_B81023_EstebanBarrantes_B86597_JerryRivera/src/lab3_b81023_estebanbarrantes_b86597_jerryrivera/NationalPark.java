@@ -14,14 +14,16 @@ public class NationalPark extends ProtectedZones implements Income{
     private double privateIncomes;
     private int nationalVisitors;
     private int foreignVisitors;
-    public NationalPark(String name,String location,double total,int nationalVisitors, int foreignVisitors){
+    private int electricityUsers;
+    public NationalPark(String name,String location,double total,int nationalVisitors, int foreignVisitors,int elecUsers){
         super(name, location,total);
         this.foreignVisitors = foreignVisitors;
         this.nationalVisitors = nationalVisitors;
+        this.electricityUsers=elecUsers;
     }
     
     public NationalPark() {
-        this("","",0,0,0);        
+        this("","",0,0,0,0);        
     }
 /////////////////////////////////////////7
 
@@ -71,6 +73,7 @@ public class NationalPark extends ProtectedZones implements Income{
         this.privateIncomes=(foreignVisitors*6000)+(nationalVisitors*50000);
     }
     
+    @Override
     public double totalIncomes(){
         super.setTotalIncomes(privateIncomes+publicIncomes);
         return super.getTotalIncomes();

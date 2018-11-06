@@ -9,7 +9,7 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  *
  * @author estebanbv
  */
-public abstract class ProtectedZones {
+public class ProtectedZones {
     private String name;
     private String location;
     private double totalIncomes;
@@ -50,6 +50,5 @@ public abstract class ProtectedZones {
     public String toString() {
         return "ProtectedZones{" + "name=" + name + ", location=" + location + '}';
     }
-    public abstract double totalIncomes();
   
 }

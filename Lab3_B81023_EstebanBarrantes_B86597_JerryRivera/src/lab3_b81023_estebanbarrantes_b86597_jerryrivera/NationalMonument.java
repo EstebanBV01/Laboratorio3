@@ -38,12 +38,13 @@ public class NationalMonument extends NationalPark implements Income {
     
     @Override
     public double totalIncomes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        super.setTotalIncomes(this.privateIncomes);
+        return super.totalIncomes();
     }
 
     @Override
     public void privateIncome() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.privateIncomes=(super.getForeignVisitors()*6000)+(super.getNationalVisitors()*5000);
     }
     
 }
