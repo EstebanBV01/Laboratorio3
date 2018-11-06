@@ -16,7 +16,7 @@ public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
        NationalPark natPark2=new NationalPark("Sta Rosa", "guanacaste,liberia",0,0);
        Vector vector=new Vector();
        ////////////////////////
-       natPark.privateIncome(30, 40);
+       
        natPark.publicIncome();
        natPark.setTotalIncomes(natPark.publicIncomes, natPark.privateIncomes);
        vector.addProtectedPlace(natPark);

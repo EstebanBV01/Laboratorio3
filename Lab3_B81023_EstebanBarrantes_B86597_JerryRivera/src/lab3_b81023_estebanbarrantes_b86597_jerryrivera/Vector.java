@@ -21,7 +21,8 @@ public class Vector {
         vector=new ProtectedZones[CONST];
     }
     public int getCounter(){
-    return counter;}
+    return counter;
+    }
     /////////////////
     public void addProtectedPlace(ProtectedZones place){
         if(place != null){

@@ -9,10 +9,13 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  *
  * @author estebanbv,
  */
-public class NationalPark extends ProtectedZones{
+public class NationalPark extends ProtectedZones implements Income{
     double totalIncomes;
     double publicIncomes;
     double privateIncomes;
+    private int electricityUsers;
+    private int nationalVisitors;
+    private int foreignVisitors;
     public NationalPark( String name, String location) {
         super(name, location);
     }
@@ -21,28 +24,67 @@ public class NationalPark extends ProtectedZones{
         this.publicIncomes = publicIncomes;
         this.privateIncomes = privateIncomes;
     }
+    
+    public NationalPark(String name,String location,int electricityUsers,int nationalVisitors, int foreignVisitors){
+        super(name, location);
+        this.electricityUsers = electricityUsers;
+        this.foreignVisitors = foreignVisitors;
+        this.nationalVisitors = nationalVisitors;
+    }
+    
     public NationalPark(int stateIncomes, int parkincomes) {
         this("","");        
     }
 /////////////////////////////////////////7
+
+    public int getElectricityUsers() {
+        return electricityUsers;
+    }
+
+    public void setElectricityUsers(int electricityUsers) {
+        this.electricityUsers = electricityUsers;
+    }
+
+    public int getNationalVisitors() {
+        return nationalVisitors;
+    }
+
+    public void setNationalVisitors(int nationalVisitors) {
+        this.nationalVisitors = nationalVisitors;
+    }
+
+    public int getForeignVisitors() {
+        return foreignVisitors;
+    }
+
+    public void setForeignVisitors(int foreignVisitors) {
+        this.foreignVisitors = foreignVisitors;
+    }
+    
     public double getTotalIncomes() {
         return totalIncomes;
     }
+    
     public void setTotalIncomes(double publicIncomes,double privateIncomes) {
         this.totalIncomes =publicIncomes+privateIncomes;
     }
+    
     public void setPrivateIncomes(int privateIncomes) {
         this.privateIncomes = privateIncomes;
     }
+    
     public double getPrivateIncomes() {
         return privateIncomes;
     }
+    
     public void setPublicIncomes(int incomes) {
         this.publicIncomes = incomes;
     }
+    
     public double getPublicIncomes(){
         return publicIncomes;
     }
+    
     @Override
     public String toString() {
         return "NationalPark{"+super.toString() +"publicIncomes "+publicIncomes+"  privateIncomes "+privateIncomes+'}';
@@ -54,18 +96,20 @@ impuesto fijo de ¢1200 anuales que rebaja a cada uno de los clientes subscritos
 electricidad del estado en sus recibos. El cálculo del pago de entradas al parque corresponde a
 la cantidad de personas que entraron al parque durante el año por un monto estipulado de
 ¢5000 para costarricenses y ¢6000 para extranjeros.*/
-    public double publicIncome(){
-        //supongo que 1200*2millones
-        publicIncomes=1200*200;
-        return publicIncomes;
+    @Override
+    public void publicIncome(){
+        publicIncomes=1200*electricityUsers;
     }
-    public double  privateIncome(int intTickets,int natTickets){//ticketes para
-        this.privateIncomes=(intTickets*6000)+(natTickets*50000);       
-        return privateIncomes;                               //interacionales y nacionales   
-        
+    
+    @Override
+    public void  privateIncome(){//ticketes para
+        this.privateIncomes=(foreignVisitors*6000)+(nationalVisitors*50000);
     }
+    
     public double totalIncomes(){
         this.totalIncomes=privateIncomes+publicIncomes;
         return totalIncomes;
     }
+
+    
 }
