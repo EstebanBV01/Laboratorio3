@@ -14,6 +14,8 @@ public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
     public static void main(String[] args) {
        NationalPark natPark=new NationalPark("poas volcano", "alajuala,poas",0,450, 770, 760);
        NationalPark natPark2=new NationalPark("Sta Rosa", "guanacaste,liberia",0,45,677, 888);
+       NationalMonument natMon =new NationalMonument("Estatua", "Alajuela" , 0,10, 6);
+       NationalMonument natMon2 =new NationalMonument("Obelisco", "Cartago" , 0,6, 11);
        Vector vector=new Vector();
        WildLifeRefugge wild=new WildLifeRefugge("cahita", "limon,guapiles", 0, false, 3440, 450, 770);
        ////////////////////////

@@ -21,7 +21,12 @@ public class NationalPark extends ProtectedZones implements Income{
         this.nationalVisitors = nationalVisitors;
         this.electricityUsers=elecUsers;
     }
-    
+        public NationalPark(String name,String location,double total,int nationalVisitors, int foreignVisitors){
+        super(name, location,total);
+        this.foreignVisitors = foreignVisitors;
+        this.nationalVisitors = nationalVisitors;
+       
+    }
     public NationalPark() {
         this("","",0,0,0,0);        
     }

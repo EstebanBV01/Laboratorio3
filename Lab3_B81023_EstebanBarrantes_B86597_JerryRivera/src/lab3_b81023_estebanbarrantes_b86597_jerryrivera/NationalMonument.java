@@ -14,10 +14,9 @@ public class NationalMonument extends NationalPark implements Income {
     private double privateIncomes;
     
    
-    public NationalMonument (String name,String location, double total, double publicIncomes, double privateIncomes , int nationalVisitors, int foreignVisitors){
-        super(name, location, total, nationalVisitors, foreignVisitors, foreignVisitors);
-        this.privateIncomes = privateIncomes;
-        this.publicIncomes = publicIncomes;
+    public NationalMonument (String name,String location, double total  , int nationalVisitors, int foreignVisitors){
+        super(name, location, total, nationalVisitors, foreignVisitors);
+        
     }
 
     public double getPublicIncomes() {
