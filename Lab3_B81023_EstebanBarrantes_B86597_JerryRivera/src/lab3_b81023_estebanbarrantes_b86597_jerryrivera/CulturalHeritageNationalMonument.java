@@ -21,7 +21,7 @@ public class CulturalHeritageNationalMonument extends NationalMonument implement
     
     @Override
     public double totalIncomes (){
-        
+        return -1;
     }
     
     

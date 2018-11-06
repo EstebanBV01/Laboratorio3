@@ -58,14 +58,9 @@ public class NationalPark extends ProtectedZones implements Income{
     public double getPublicIncomes(){
         return publicIncomes;
     }
-    
-    @Override
-    public String toString() {
-        return "NationalPark{"+super.toString() +"publicIncomes "+publicIncomes+"  privateIncomes "+privateIncomes+'}';
-    }
-    @Override
-    public void publicIncome(int electricityUsers){
-        publicIncomes=1200*electricityUsers;
+    public double publicIncome(){
+        publicIncomes=1200*this.electricityUsers;
+        return this.publicIncomes;
     }
     
     @Override
@@ -78,6 +73,11 @@ public class NationalPark extends ProtectedZones implements Income{
         super.setTotalIncomes(privateIncomes+publicIncomes);
         return super.getTotalIncomes();
     }
+    @Override
+    public String toString() {
+        return "NationalPark{"+super.toString() +"publicIncomes "+publicIncomes+"  privateIncomes "+privateIncomes+'}';
+    }
+    
 
     
 }

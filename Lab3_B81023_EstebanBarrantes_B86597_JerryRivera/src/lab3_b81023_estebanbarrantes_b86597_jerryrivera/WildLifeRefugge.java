@@ -68,14 +68,9 @@ totalmente de ayuda no gubernamental por empresas privadas.*/
    public double publicIncomes(){
        if(this.statesProperty==true){
          this.publicIncomes=this.gasolineTax*000.5;
-       }
-       return this.publicIncomes;
-   }
-   public double privateIncomes(){
-       if(this.statesProperty==false){
-           return this.privateIncomes;
-        }else
-       return -1;
+         return this.publicIncomes;
+       }else return this.privateIncomes;
+       
    }
     
     
