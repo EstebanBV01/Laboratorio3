@@ -75,7 +75,7 @@ public class NationalPark extends ProtectedZones implements Income{
     }
     
     @Override
-    public double totalIncomes(){
+    public double totalIncome(){
         this.totalIncomes=privateIncomes+publicIncomes;
         return this.totalIncomes;
     }

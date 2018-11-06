@@ -51,7 +51,7 @@ totalmente de ayuda no gubernamental por empresas privadas.*/
         return "WildLifeRefugge{" +super.toString() + ", privateIncomes=" + privateIncomes + ", publicIncomes=" + publicIncomes + '}';
     }
    
-   public double totalIncomes(){
+   public double totalIncome(){
         this.totalIncomes=privateIncomes+publicIncomes;
         return this.totalIncomes;
     }

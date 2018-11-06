@@ -24,12 +24,43 @@ public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
        
        vector.addProtectedPlace(natPark);
        vector.addProtectedPlace(natPark2);
-       vector.addProtectedPlace(natPark2);
+       vector.addProtectedPlace(natMon);
+       vector.addProtectedPlace(natMon2);
+       vector.addProtectedPlace(natMonHeritage);
+       vector.addProtectedPlace(natMonHeritage2);
+       vector.addProtectedPlace(natMonHeritage2);
+       vector.addProtectedPlace(bioreserv);
+       vector.addProtectedPlace(bioreserv2);
        
        vector.vectString();
        natPark.publicIncome();
+       natPark2.publicIncome();
+       natMon.publicIncome();
+       natMon2.publicIncome();
+       natMonHeritage.publicIncome();
+       natMonHeritage2.publicIncome();
+       bioreserv.publicIncome();
+       bioreserv2.publicIncome();
+       
+       vector.vectString();
+       natPark.privateIncome();
+       natPark2.privateIncome();
+       natMon.privateIncome();
+       natMon2.privateIncome();
+       natMonHeritage.privateIncome();
+       natMonHeritage2.privateIncome();
+       
+       vector.vectString();
+       natPark.totalIncome();
+       natPark2.totalIncome();
+       natMon.totalIncome();
+       natMon2.totalIncome();
+       natMonHeritage.totalIncome();
+       natMonHeritage2.totalIncome();
+       bioreserv.totalIncome();
+       bioreserv2.totalIncome();
        System.out.println("counter "+vector.getCounter());
-       System.out.println("national park total incomes "+natPark.totalIncomes());
+       System.out.println("national park total incomes "+natPark.totalIncome());
       
     }
     

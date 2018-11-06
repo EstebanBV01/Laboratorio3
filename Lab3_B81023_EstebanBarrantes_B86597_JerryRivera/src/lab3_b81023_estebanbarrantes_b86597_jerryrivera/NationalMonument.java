@@ -37,7 +37,7 @@ public class NationalMonument extends NationalPark implements Income {
     }
     
     @Override
-    public double totalIncomes() {
+    public double totalIncome() {
         this.totalIncomes=this.privateIncomes;
         return this.totalIncomes;
     }

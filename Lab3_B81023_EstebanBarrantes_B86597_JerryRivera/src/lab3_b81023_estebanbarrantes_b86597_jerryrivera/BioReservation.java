@@ -30,11 +30,12 @@ public class BioReservation extends ProtectedZones implements Income {
         this.publicIncome = publicIncome;
     } 
     @Override
-    public double totalIncomes() {
+    public double totalIncome() {
         this.totalIncomes=publicIncome;
         return this.totalIncomes;
     }
     
+    @Override
     public double publicIncome(){
         this.publicIncome = this.stateHelp;
         return this.publicIncome;

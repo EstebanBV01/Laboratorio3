@@ -25,9 +25,9 @@ public class CulturalHeritageNationalMonument extends NationalMonument implement
     }
     
     @Override
-    public double totalIncomes (){
+    public double totalIncome (){
         this.totalIncomes=this.privateIncomes;
-        return super.totalIncomes();
+        return super.totalIncome();
     }
     
     
