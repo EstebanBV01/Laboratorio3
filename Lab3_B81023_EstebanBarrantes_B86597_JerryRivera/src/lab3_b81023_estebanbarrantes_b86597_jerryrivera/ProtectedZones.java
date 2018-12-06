@@ -9,10 +9,11 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  *
  * @author estebanbv
  */
-public class ProtectedZones {
+public abstract class ProtectedZones {
     private String name;
     private String location;
-    private double totalIncomes;
+    private double totalIncomesSuper;
+    
     public ProtectedZones(String name, String location) {
         this.name = name;
         this.location = location;
@@ -38,9 +39,19 @@ public class ProtectedZones {
         this.location = location;
     }
 
+    public void setTotalIncomesSuper(double totalIncomesSuper) {
+        this.totalIncomesSuper = totalIncomesSuper;
+    }
+
+    public double getTotalIncomesSuper() {
+        return totalIncomesSuper;
+    }
+    
+    public abstract void totalIncomeSuper();
     @Override
     public String toString() {
         return "ProtectedZones{" + "name=" + name + ", location=" + location + '}';
     }
+    
   
 }

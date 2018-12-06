@@ -45,7 +45,9 @@ public class BioReservation extends ProtectedZones implements Income {
         this.publicIncome = this.stateHelp;
         return this.publicIncome;
     }
-    public void privateIncome(){};
-    
+    public double privateIncome(){
+        return this.privateIncome();
+    }
+    public  void totalIncomeSuper(){}
     
 }

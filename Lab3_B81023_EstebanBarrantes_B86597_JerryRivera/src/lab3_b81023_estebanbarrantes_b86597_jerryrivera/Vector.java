@@ -27,7 +27,7 @@ public class Vector {
     public void addProtectedPlace(ProtectedZones place){
         if(place != null){
             if(counter==vector.length-1){
-                System.out.println("paso");
+                //System.out.println("paso");
                 this.biggerVector();
             }if(counter==0){
                  for (int i =counter; i >0; i--) {
@@ -54,5 +54,28 @@ public class Vector {
             storage+=vector[i]+" \n";
         }
         System.out.println(storage+"\n");
-    }        
+    }
+    public void suma(){
+        double storage=0;
+        for (int i = 0; i < vector.length-1; i++) {
+            storage+=vector[i].getTotalIncomesSuper();
+        }
+        System.out.println(storage+"  es el total total total");
+    }
+    public String reporte1(){
+        double result =0;
+        String print = " ";
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] != null) {
+                print = print +"\n"+ vector[i];
+            }
+        }
+        
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] != null) {
+                result = result + vector[i].getTotalIncomesSuper();
+            }
+        }
+        return print + "\n"+"la suma es: "+result;
+    }
 }

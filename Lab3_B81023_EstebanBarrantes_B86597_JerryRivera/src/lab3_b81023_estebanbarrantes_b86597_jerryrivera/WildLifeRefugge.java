@@ -53,13 +53,15 @@ totalmente de ayuda no gubernamental por empresas privadas.*/
         this.publicIncomes = this.gasolineTax*0.5;
         return this.publicIncomes;
     }
-   public void privateIncome(){
+    @Override
+   public double privateIncome(){
+   return this.privateIncomes;
    }
    public double totalIncome(){
         this.totalIncomes=publicIncomes+privateIncomes;
         return this.totalIncomes;
     }
-  
+  public  void totalIncomeSuper(){}
     
     
 }

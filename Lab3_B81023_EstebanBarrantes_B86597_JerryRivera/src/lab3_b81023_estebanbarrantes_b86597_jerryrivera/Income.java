@@ -11,7 +11,7 @@ package lab3_b81023_estebanbarrantes_b86597_jerryrivera;
  */
 public interface Income {
     public double publicIncome();
-    public void privateIncome();
+    public double privateIncome();
     public  double totalIncome();
     
 }
