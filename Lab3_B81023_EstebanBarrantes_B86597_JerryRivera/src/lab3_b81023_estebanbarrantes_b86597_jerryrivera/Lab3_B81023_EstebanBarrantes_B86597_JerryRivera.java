@@ -32,6 +32,7 @@ public class Lab3_B81023_EstebanBarrantes_B86597_JerryRivera {
        System.out.println("national park total incomesTOTAAAL ");
       // vector.suma();
         System.out.println(vector.reporte1());
+        System.out.println(vector.reporte2());
     }
     
 }

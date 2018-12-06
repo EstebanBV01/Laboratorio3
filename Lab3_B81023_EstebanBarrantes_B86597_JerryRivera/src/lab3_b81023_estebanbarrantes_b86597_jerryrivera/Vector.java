@@ -78,4 +78,31 @@ public class Vector {
         }
         return print + "\n"+"la suma es: "+result;
     }
+        public String reporte2(){
+        double subtotal = 0.0;
+        double Total = 0.0;
+        double noGovernment = 0.0;
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] != null) {
+                if(vector[i] instanceof NationalPark){
+                    NationalPark parque = (NationalPark)vector[i];
+                    Total += parque.getNationalVisitors() +parque.getForeignVisitors();
+                    subtotal += parque.getPublicIncomes();
+                }else if(vector[i] instanceof BioReservation){
+                    BioReservation reserva = (BioReservation)vector[i];
+                    Total += reserva.publicIncome();
+                }else if(vector[i] instanceof WildLifeRefugge){
+                    WildLifeRefugge wild = (WildLifeRefugge)vector[i];
+                    subtotal+= wild.getPublicIncomes();
+                }else if(vector[i] instanceof NationalMonument){
+                    NationalMonument monument = (NationalMonument)vector[i];
+                    noGovernment += monument.localIncome();
+                }else if(vector[i] instanceof CulturalHeritageNationalMonument){
+                    CulturalHeritageNationalMonument cult = (CulturalHeritageNationalMonument)vector[i];
+                    Total += cult.totalIncome() + cult.totalIncome();
+                }  
+            }
+        }
+        return "Total " + subtotal + ", entradas = "+ Total + ", no guvernamental " + noGovernment;
+    }
 }
